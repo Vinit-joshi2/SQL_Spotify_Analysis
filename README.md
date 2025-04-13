@@ -46,7 +46,32 @@ select * from spotify
 1. Count the number of tracks
    ```sql
    select  count(*) from  spotify
+   ```
+2. Count the unique artist
+   ```sql
+	select count(distinct artist) from spotify
+   ```
 
+3. Unique albm_type in our dataset
+   ```sql
+	select distinct album_type from spotify
+
+   ```
+
+4. Minmum and Maxmum duration of tracks
+   ```sql
+	select max(duration_min) from spotify
+	select min(duration_min) from spotify
+   ```
+5. Unique Channel in our dataset
+   ```sql
+	select distinct channel from spotify
+
+   ```
+
+6. Most tracks played in which platform
+   ```sql
+	select distinct most_played_on from spotify
    ```
 ## Project Steps
 
