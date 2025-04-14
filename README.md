@@ -290,6 +290,68 @@ order by 2 desc
 ![Correlation](https://github.com/Vinit-joshi2/SQL_Spotify_Analysis/blob/main/Correlation_data.png)
 
 
+7. Top 10 Most Liked Tracks Per Channel (Window Function)
+```sql
+with most_liked as
+(
+select 
+	track,
+	channel,
+	likes as total_likes,
+	dense_rank() over(partition by channel order by likes desc ) as rank
+from spotify
+where likes is not null
+)
+select * from  most_liked
+where rank<= 10
+
+```
+
+8. Artist Stream Share (% of Total Streams)
+```sql
+select 
+	artist,
+	sum(stream) as total_stream,
+	round((sum(stream) / (select sum(stream) from spotify)) * 100.0,2) as percent_of_stream_share
+from spotify
+group by 1
+order by 2 desc
+limit 10
+
+```
+9. Tracks with Above-Average Loudness and Tempo (Energetic & Fast)
+```sql
+select avg(loudness) from spotify -- -7.67
+select avg(Tempo) from spotify -- 120.57
+
+select 
+	track,
+	loudness,
+	Tempo
+from spotify
+where 
+	loudness > (select avg(loudness) from spotify)
+	and
+	Tempo > (select avg(Tempo) from spotify)
+
+```
+10 . Track-to-Track Progression for Each Artist
+```sql
+select 
+	artist,
+	track,
+	stream,
+	lag(stream) over(partition by artist order by stream) as prev_stream,
+	stream - LAG(stream) over(partition by artist order by stream) as stream_change
+from spotify
+where stream is not null
+
+
+````
+
+
+
+
 Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
 
 ---
