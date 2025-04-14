@@ -368,13 +368,14 @@ To improve query performance, we carried out the following optimization process:
         - Execution time (E.T.): **57.82 ms**
         - Planning time (P.T.): **1.15 ms**
     - Below is the **screenshot** of the `EXPLAIN` result before optimization:
+      
       ![EXPLAIN Before Index](https://github.com/Vinit-joshi2/SQL_Spotify_Analysis/blob/main/QOP1.png)
 
 - **Index Creation on the `artist` Column**
     - To optimize the query performance, we created an index on the `artist` column. This ensures faster retrieval of rows where the artist is queried.
     - **SQL command** for creating the index:
       ```sql
-      CREATE INDEX idx_artist ON spotify_tracks(artist);
+     create index artist_index on spotify(artist)
       ```
 
 - **Performance Analysis After Index Creation**
@@ -382,6 +383,7 @@ To improve query performance, we carried out the following optimization process:
         - Execution time (E.T.): **15.26 ms**
         - Planning time (P.T.): **1.61 ms**
     - Below is the **screenshot** of the `EXPLAIN` result after index creation:
+      
       ![EXPLAIN After Index](https://github.com/Vinit-joshi2/SQL_Spotify_Analysis/blob/main/QOP2.png)
 
 - **Graphical Performance Comparison**
