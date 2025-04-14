@@ -375,7 +375,7 @@ To improve query performance, we carried out the following optimization process:
     - To optimize the query performance, we created an index on the `artist` column. This ensures faster retrieval of rows where the artist is queried.
     - **SQL command** for creating the index:
       ```sql
-     create index artist_index on spotify(artist)
+     	create index artist_index on spotify(artist)
       ```
 
 - **Performance Analysis After Index Creation**
@@ -386,11 +386,4 @@ To improve query performance, we carried out the following optimization process:
       
       ![EXPLAIN After Index](https://github.com/Vinit-joshi2/SQL_Spotify_Analysis/blob/main/QOP2.png)
 
-- **Graphical Performance Comparison**
-    - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
-    - **Graph view** shows the significant drop in both execution and planning times:
-
-
-This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
----
 
