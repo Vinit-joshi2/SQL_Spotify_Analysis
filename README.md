@@ -286,6 +286,7 @@ order by 2 desc
 - This suggests that there is almost no linear relationship between a track's energy and its views.
 
 - In other words, energetic songs are not significantly more likely to get more views than less energetic ones — at least in your current dataset.
+![Correlation](https://github.com/Vinit-joshi2/SQL_Spotify_Analysis/blob/main/Correlation_data.png)
 
 
 Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
