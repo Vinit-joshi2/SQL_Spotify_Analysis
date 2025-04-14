@@ -286,6 +286,7 @@ order by 2 desc
 - This suggests that there is almost no linear relationship between a track's energy and its views.
 
 - In other words, energetic songs are not significantly more likely to get more views than less energetic ones — at least in your current dataset.
+  
 ![Correlation](https://github.com/Vinit-joshi2/SQL_Spotify_Analysis/blob/main/Correlation_data.png)
 
 
