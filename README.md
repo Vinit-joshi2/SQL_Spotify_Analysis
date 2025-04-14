@@ -352,6 +352,8 @@ where stream is not null
 
 
 
+
+
 Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
 
 ---
